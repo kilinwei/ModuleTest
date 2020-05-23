@@ -14,24 +14,26 @@ import androidx.navigation.Navigation;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Module2Fragment extends Fragment {
+public class Module1Fragment4 extends Fragment {
 
 
-    public Module2Fragment() {
+    public Module1Fragment4() {
         // Required empty public constructor
     }
+
+
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_module2, container, false);
-        TextView tv = (TextView) rootView.findViewById(R.id.app_tv_text);
+        View rootView = inflater.inflate(R.layout.fragment_module4, container, false);
+      TextView  tv = (TextView)rootView.findViewById(R.id.app_tv_text);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).popBackStack();
+//                Navigation.findNavController(v).navigate(R.id.action_appFragment_to_module1Fragment);
             }
         });
         return rootView;

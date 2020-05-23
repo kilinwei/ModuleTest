@@ -11,7 +11,7 @@
         android:label="AppFragment"
         tools:layout="@layout/fragment_app">
         <action
-            android:id="@+id/action_appFragment_to_navigation"
+            android:id="@+id/action_appFragment_to_module1_navigation"
             app:destination="@id/module1_navigation" />
     </fragment>
     <include app:graph="@navigation/module1_navigation" />

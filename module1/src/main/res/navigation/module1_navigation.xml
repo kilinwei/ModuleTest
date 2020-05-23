@@ -6,6 +6,11 @@
     app:startDestination="@id/module1Fragment"
     tools:ignore="UnusedNavigation">
 
+    <!--        Global Action ,所有的Fragment都能够使用-->
+    <action
+        android:id="@+id/action_module3Fragment_to_module4Fragment"
+        app:destination="@id/module4Fragment" />
+
     <fragment
         android:id="@+id/module1Fragment"
         android:name="com.example.module1.Module1Fragment"
@@ -19,18 +24,25 @@
     </fragment>
     <fragment
         android:id="@+id/module2Fragment"
-        android:name="com.example.module1.Module2Fragment"
-        android:label="Module2Fragment" />
+        android:name="com.example.module1.Module1Fragment2"
+        android:label="Module2Fragment" >
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/module3Fragment"
-        android:name="com.example.module1.Module3Fragment"
+        android:name="com.example.module1.Module1Fragment3"
         android:label="Module3Fragment">
         <action
             android:id="@+id/action_module3Fragment_to_module4Fragment"
             app:destination="@id/module4Fragment" />
+        <argument
+            android:name="age"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/module4Fragment"
-        android:name="com.example.module1.Module4Fragment"
+        android:name="com.example.module1.Module1Fragment4"
         android:label="Module4Fragment" />
 </navigation>

@@ -22,25 +22,23 @@ public class Module1Fragment extends Fragment {
     }
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_module1, container, false);
-      TextView  tv = (TextView)rootView.findViewById(R.id.app_tv_text);
+        TextView tv = (TextView) rootView.findViewById(R.id.app_tv_text);
         tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_module1Fragment_to_module2Fragment);
+                Navigation.findNavController(v).navigate(Module1FragmentDirections.actionModule1FragmentToModule2Fragment("李四"));
             }
         });
-        TextView  tv2 = (TextView)rootView.findViewById(R.id.app_tv_text2);
+        TextView tv2 = (TextView) rootView.findViewById(R.id.app_tv_text2);
         tv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_module1Fragment_to_module3Fragment);
+                Navigation.findNavController(v).navigate(Module1FragmentDirections.actionModule1FragmentToModule3Fragment(18));
             }
         });
         return rootView;
